@@ -201,14 +201,16 @@ input:checked + .slider:before {
     padding: 80px 0;
 }
 
+/* Căn giữa các nút filter */
 .filter-btns {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
+/* Style nút filter - light mode */
 .filter-btn {
     background: transparent;
     border: 2px solid #007bff;
@@ -221,6 +223,23 @@ input:checked + .slider:before {
 }
 
 .filter-btn.active,
+.filter-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Dark mode cho filter buttons */
+body.dark .filter-btn {
+    border-color: #ddd;
+    color: #ddd;               /* chữ sáng, dễ nhìn trên nền tối */
+}
+
+body.dark .filter-btn.active,
+body.dark .filter-btn:hover {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
 .filter-btn:hover {
     background: #007bff;
     color: white;
@@ -428,4 +447,17 @@ body.dark footer {
     .hero h1 {
         font-size: 2rem;
     }
+}
+/* Dark mode cho project card */
+body.dark .project-card {
+    background: #2a2a40;
+    color: #f0f0f0;           /* chữ sáng, đủ tương phản */
+}
+
+body.dark .project-card h3 {
+    color: #fff;
+}
+
+body.dark .project-card p {
+    color: #ccc;
 }
