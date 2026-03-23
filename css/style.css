@@ -195,22 +195,21 @@ input:checked + .slider:before {
     font-size: 0.9rem;
 }
 
-/* Projects */
+/* Projects Section */
 .projects {
     background: #f9f9f9;
     padding: 80px 0;
 }
 
-/* Căn giữa các nút filter */
+/* Filter buttons – centering and styling */
 .filter-btns {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-/* Style nút filter - light mode */
 .filter-btn {
     background: transparent;
     border: 2px solid #007bff;
@@ -228,23 +227,7 @@ input:checked + .slider:before {
     color: white;
 }
 
-/* Dark mode cho filter buttons */
-body.dark .filter-btn {
-    border-color: #ddd;
-    color: #ddd;               /* chữ sáng, dễ nhìn trên nền tối */
-}
-
-body.dark .filter-btn.active,
-body.dark .filter-btn:hover {
-    background: #007bff;
-    border-color: #007bff;
-    color: white;
-}
-.filter-btn:hover {
-    background: #007bff;
-    color: white;
-}
-
+/* Project cards */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -257,6 +240,7 @@ body.dark .filter-btn:hover {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    color: #333;          /* đảm bảo chữ đen trong light mode */
 }
 
 .project-card:hover {
@@ -275,6 +259,7 @@ body.dark .filter-btn:hover {
 
 .project-info h3 {
     margin-bottom: 0.5rem;
+    color: #000;          /* tiêu đề màu đen đậm */
 }
 
 .btn-small {
@@ -317,6 +302,7 @@ body.dark .filter-btn:hover {
     position: relative;
     animation: slideDown 0.3s ease;
     transition: background 0.3s;
+    color: #333;
 }
 
 .close-modal {
@@ -338,53 +324,12 @@ body.dark .filter-btn:hover {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Dark mode overrides */
-body.dark {
-    background: #1e1e2f;
-    color: #f4f4f4;
+/* Contact */
+.contact {
+    padding: 80px 0;
+    background: white;
 }
 
-body.dark header {
-    background: #2a2a40;
-}
-
-body.dark nav a {
-    color: #f4f4f4;
-}
-
-body.dark .about,
-body.dark .contact,
-body.dark .project-card,
-body.dark .modal-content {
-    background: #2a2a40;
-    color: #f4f4f4;
-}
-
-body.dark .skills {
-    background: #1e1e2f;
-}
-
-body.dark .filter-btn {
-    border-color: #f4f4f4;
-    color: #f4f4f4;
-}
-
-body.dark .filter-btn.active,
-body.dark .filter-btn:hover {
-    background: #007bff;
-    border-color: #007bff;
-    color: white;
-}
-
-body.dark .close-modal {
-    color: #ccc;
-}
-
-body.dark .close-modal:hover {
-    color: white;
-}
-
-/* Contact Form */
 .contact-info {
     text-align: center;
     margin-bottom: 2rem;
@@ -412,19 +357,75 @@ input, textarea {
     color: #333;
 }
 
-body.dark input,
-body.dark textarea {
-    background: #3a3a50;
-    border-color: #555;
-    color: #f4f4f4;
-}
-
 /* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
+}
+
+/* ========================= */
+/* DARK MODE OVERRIDES       */
+/* ========================= */
+body.dark {
+    background: #1e1e2f;
+    color: #f4f4f4;
+}
+
+body.dark header {
+    background: #2a2a40;
+}
+
+body.dark nav a {
+    color: #f4f4f4;
+}
+
+body.dark .about,
+body.dark .contact,
+body.dark .project-card,
+body.dark .modal-content {
+    background: #2a2a40;
+    color: #f4f4f4;
+}
+
+body.dark .project-card h3 {
+    color: #fff;          /* tiêu đề trắng trong dark mode */
+}
+
+body.dark .skills {
+    background: #1e1e2f;
+}
+
+body.dark .filter-btn {
+    border-color: #f0f0f0;
+    color: #f0f0f0;      /* chữ sáng trên nền tối */
+}
+
+body.dark .filter-btn.active,
+body.dark .filter-btn:hover {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+body.dark .btn-small {
+    background: #007bff;
+}
+
+body.dark .close-modal {
+    color: #ccc;
+}
+
+body.dark .close-modal:hover {
+    color: white;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #3a3a50;
+    border-color: #555;
+    color: #f4f4f4;
 }
 
 body.dark footer {
@@ -447,17 +448,10 @@ body.dark footer {
     .hero h1 {
         font-size: 2rem;
     }
-}
-/* Dark mode cho project card */
-body.dark .project-card {
-    background: #2a2a40;
-    color: #f0f0f0;           /* chữ sáng, đủ tương phản */
-}
-
-body.dark .project-card h3 {
-    color: #fff;
-}
-
-body.dark .project-card p {
-    color: #ccc;
+    .filter-btns {
+        gap: 0.5rem;
+    }
+    .filter-btn {
+        padding: 0.4rem 1rem;
+    }
 }
