@@ -429,3 +429,20 @@ body.dark footer {
         font-size: 2rem;
     }
 }
+/* Đảm bảo chữ trong các card dự án có màu tối, dễ đọc */
+.project-card {
+    color: #333; /* màu xám đậm, dễ nhìn */
+}
+
+.project-card h3 {
+    color: #000; /* tiêu đề màu đen */
+}
+
+/* Nếu muốn giữ nguyên cho dark mode (tùy chọn) */
+body.dark .project-card {
+    color: #f0f0f0; /* sáng hơn khi ở dark mode */
+}
+
+body.dark .project-card h3 {
+    color: #fff;
+}
