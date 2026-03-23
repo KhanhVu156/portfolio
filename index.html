@@ -83,30 +83,43 @@
             <div class="project-grid">
                 <!-- Each project card will be cloned/created by JavaScript, but we'll provide static HTML for demo -->
                 <!-- You can generate these dynamically via JS or keep static with data-category attributes -->
-                <div class="project-card" data-category="embedded">
-                    <img src="images/project1.jpg" alt="Embedded Project">
-                    <div class="project-info">
-                        <h3>Smart Sensor Hub</h3>
-                        <p>ESP32-C5 board with a system for detecting and defending against 5 GHz WiFi attacks.</p>
-                        <button class="btn-small modal-trigger" data-id="1">Details</button>
-                    </div>
+                <section id="projects" class="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="filter-btns">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="embedded">Embedded</button>
+            <button class="filter-btn" data-filter="iot">IoT</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+        <div class="project-grid">
+            <div class="project-card" data-category="embedded">
+                <img src="images/project1.jpg" alt="Embedded Project">
+                <div class="project-info">
+                    <h3>Smart Sensor Hub</h3>
+                    <p>ESP32-C5 board with a system for detecting and defending against 5 GHz WiFi attacks.</p>
+                    <button class="btn-small modal-trigger" data-id="1">Details</button>
                 </div>
-                <div class="project-card" data-category="iot">
-                    <img src="images/project2.jpg" alt="IoT Project">
-                    <div class="project-info">
-                        <h3>Home Automation</h3>
-                        <p>ESP8266 + MQTT smart lighting system.</p>
-                        <button class="btn-small modal-trigger" data-id="2">Details</button>
-                    </div>
+            </div>
+            <div class="project-card" data-category="iot">
+                <img src="images/project2.jpg" alt="IoT Project">
+                <div class="project-info">
+                    <h3>Home Automation</h3>
+                    <p>ESP8266 + MQTT smart lighting system.</p>
+                    <button class="btn-small modal-trigger" data-id="2">Details</button>
                 </div>
-                <div class="project-card" data-category="web">
-                    <img src="images/project3.jpg" alt="Web Project">
-                    <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p>Responsive personal portfolio with dark mode.</p>
-                        <button class="btn-small modal-trigger" data-id="3">Details</button>
-                    </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="images/project3.jpg" alt="Web Project">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive personal portfolio with dark mode.</p>
+                    <button class="btn-small modal-trigger" data-id="3">Details</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
                 <!-- Add more projects as needed -->
             </div>
         </div>
