@@ -429,20 +429,33 @@ body.dark footer {
         font-size: 2rem;
     }
 }
-/* Đảm bảo chữ trong các card dự án có màu tối, dễ đọc */
-.project-card {
-    color: #333; /* màu xám đậm, dễ nhìn */
+/* Filter buttons – light mode */
+.filter-btn {
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
-.project-card h3 {
-    color: #000; /* tiêu đề màu đen */
+.filter-btn.active,
+.filter-btn:hover {
+    background: #007bff;
+    color: white;
 }
 
-/* Nếu muốn giữ nguyên cho dark mode (tùy chọn) */
-body.dark .project-card {
-    color: #f0f0f0; /* sáng hơn khi ở dark mode */
+/* Dark mode overrides */
+body.dark .filter-btn {
+    border-color: #f0f0f0;
+    color: #f0f0f0;          /* chữ sáng để thấy trên nền tối */
 }
 
-body.dark .project-card h3 {
-    color: #fff;
+body.dark .filter-btn.active,
+body.dark .filter-btn:hover {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
 }
